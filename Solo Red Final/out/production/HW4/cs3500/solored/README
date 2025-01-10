@@ -1,0 +1,19 @@
+Changes made from previous assignment:
+ -  While reflecting upon the best way to reduce duplicate code between the two implementations, I
+    realized that an abstract class was probably the best option. As a result, I refactored my old
+    implementation to extend an abstract class.
+ -  This abstract class came with multiple changes, mainly an extra drawFullHand method that
+    functions like drawForHand() in the old SoloRedGameModel and another helper method. This does
+    not change any of the code from the old implementation, just refactors it into a more useful
+    format.
+ -  In the abstract class, I needed to change hand and deck from private to protected, as their
+    subclass needs access.
+ -  I refactored the model tests so that most were in an abstract testing class that could be
+    extended to test the various implementations of the model.
+ -  I realized I was using canPlayToCanvas more as an indicator of whether or not the player had
+    played to the canvas. So I changed it's name to playedToCanvas to better document it's meaning.
+    Also, a subclass needed access to it, so I made it protected instead of private.
+ -  I found a bug where the game was over after playing to the canvas. I used playedToCanvas
+    to ensure that cannot happen.
+ -  I added and reorganized several tests based on feedback from previous self-evals, such as
+    testing that the model shuffles when it should.

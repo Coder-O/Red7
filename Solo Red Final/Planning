@@ -1,0 +1,35 @@
+Planning document for HW 4, DELETE bEBFORE SUBMISSOION
+(actually prob don't need to but I should if there is no value in keeping it.)
+
+
+Do I need to change the interface of a gmae model, as it now exhibits behavior different from its
+documentation?
+
+Pros/Cons to inheritance:
++ Easier to reuse code.
++ Access to deck and hand
+X I see no way to modify the hand using composition
+---- ACTUALLY, CAN GET
+... noo I can't...
+Wait,
+I CAN STORE A 'CORRECT' HAND IN MY NEW CLASS, AND UPDATE IT WITH gatHand() OF THE COMPOSED OBJECT!!!
+Wait, that doesn't really fix things, as I still have to find a way to play from the hand using the
+old methods...
+
+
+Pros/cons to Composition:
++ Less likely to break if an implementation of it's predecessor is changed or removed.
+- It is hard to access and change the deck
+0 This option seems less risky, especially since I don't need to change most of the inner workings
++++++ I DO THIS!!!!!
+Could have like a 'buffer' zone, where the hand is still internally represented the same, but the
+new class just keeps track of how many cards at the end it shouldn't show...
+Maybe the new hand is just the whole deck??
+Nah... then you get problems with having everything shift down automatically.
+
+
+Different representations
+
+
+
+Make sure card uses two enums

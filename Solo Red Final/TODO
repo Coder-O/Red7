@@ -1,0 +1,20 @@
+TODOs for this project, DELETE THIS FILE BEFORE SUBMISSION!!!
+X   Do I prevent drawToHand from being called even at illegal times (such as after just the canvas
+    has been played to)? Nope, causes at least one Handins test to fail.
++   Check old Self-Evals for ideas on what else I should fix about my old code.
+-   Make a quickTest testing class that quickly runs all possible tests with a single push of a
+    button
+-   Make sure to write out invariants!!!
++   Check to see if provided interfaces were different than the ones already used!
+-   Do I want to change my controller so that catch any exception and rethrow the specific illegal
+    argument/state exceptions I use for quitting/ IO failure? (Use instanceof, helps reduce
+    duplicate code)
+-   Do I want to throw custom exceptions for the above purpose?
+-   Do I want to make sure that the controller catches only the exceptions being thrown a model?
+    (Limit it to the specific types provided by the model's documentation)
+    If so, should probably test that it doesn't catch other random exceptions.
++   Make sure that the user can't delay their draw and break the game, by never calling drawToHand()
+    even after playing to a palette. Maybe this should be something controlled by the controller...
++   Make CardImpl use two enums. Will have to update a bunch of different places
++   Complete the rest of the HW implementation, including the factory and main method. Also, write
+    tests for your new class!
